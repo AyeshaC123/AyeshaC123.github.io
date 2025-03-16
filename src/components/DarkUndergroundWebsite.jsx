@@ -12,7 +12,7 @@ const DarkUndergroundWebsite = () => {
     },
     about: {
       title: "ABOUT",
-      content: "We are the collective consciousness of the digital underground.",
+      content: "hi hi hi subtext.",
     },
     gallery: {
       title: "VISIONS",
@@ -56,26 +56,28 @@ const DarkUndergroundWebsite = () => {
       <main className="container mx-auto p-8 pt-16 relative z-20">
         {/* Hero section */}
         {currentSection === 'home' && (
-          <div className="flex flex-col items-center justify-center h-96">
-            <h1 className="text-6xl font-bold mb-4 text-center tracking-wider">
-              {sections.home.title}
-            </h1>
-            <p className="text-xl text-gray-400 mb-8 tracking-widest">
-              {sections.home.subtitle}
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
-              <div className="border border-gray-800 p-6 bg-gray-900 bg-opacity-40 hover:bg-opacity-60 transition-all cursor-pointer">
-                <h3 className="text-pink-500 text-xl mb-2 tracking-wider">LATEST RELEASE</h3>
-                <p className="text-gray-400">Explore our newest digital creations from the void.</p>
-              </div>
-              <div className="border border-gray-800 p-6 bg-gray-900 bg-opacity-40 hover:bg-opacity-60 transition-all cursor-pointer">
-                <h3 className="text-pink-500 text-xl mb-2 tracking-wider">ENTER THE VOID</h3>
-                <p className="text-gray-400">Navigate through our digital labyrinth.</p>
+          <div className="parallax" data-speed="0.2">
+            <div className="flex flex-col items-center justify-center h-96">
+              <h1 className="text-6xl font-bold mb-4 text-center tracking-wider fade-in">
+                {sections.home.title}
+              </h1>
+              <p className="text-xl text-gray-400 mb-8 tracking-widest">
+                {sections.home.subtitle}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+                <div className="border border-gray-800 p-6 bg-gray-900 bg-opacity-40 hover:bg-opacity-60 transition-all cursor-pointer roll-in">
+                  <h3 className="text-pink-500 text-xl mb-2 tracking-wider">LATEST RELEASE</h3>
+                  <p className="text-gray-400">Explore my newest projects.</p>
+                </div>
+                <div className="border border-gray-800 p-6 bg-gray-900 bg-opacity-40 hover:bg-opacity-60 transition-all cursor-pointer roll-in">
+                  <h3 className="text-pink-500 text-xl mb-2 tracking-wider">COOL SIDE STUFF</h3>
+                  <p className="text-gray-400">Navigate through my digital art and animations.</p>
+                </div>
               </div>
             </div>
           </div>
         )}
-        
+
         {/* About section */}
         {currentSection === 'about' && (
           <div className="max-w-4xl mx-auto">
@@ -90,44 +92,45 @@ const DarkUndergroundWebsite = () => {
                 <div className="flex flex-col space-y-4">
                   <h3 className="text-pink-500 text-xl tracking-wider">MANIFESTO</h3>
                   <p className="text-gray-400">
-                    We exist in the liminal space between reality and digital consciousness.
-                    Our art is a reflection of the void that consumes us all.
+                    I'll talk about myself here and the cool stuff i do yada yaday
                   </p>
                 </div>
                 <div className="flex flex-col space-y-4">
                   <h3 className="text-pink-500 text-xl tracking-wider">VISION</h3>
                   <p className="text-gray-400">
-                    To create a digital landscape that challenges perception and expands consciousness.
+                    woao this is coming out cool ig
                   </p>
                 </div>
               </div>
             </div>
           </div>
         )}
-        
+
         {/* Gallery section */}
         {currentSection === 'gallery' && (
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl font-bold mb-8 tracking-wider text-center">
-              {sections.gallery.title}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div key={item} className="aspect-square border border-gray-800 bg-gray-900 bg-opacity-40 relative overflow-hidden group cursor-pointer">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-pink-900 bg-opacity-30">
-                    <p className="text-white text-xl tracking-widest">VISION {item}</p>
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="w-20 h-20 bg-gray-800 rounded-full"></div>
+          <div className="parallax" data-speed="0.4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-5xl font-bold mb-8 tracking-wider text-center">
+                {sections.gallery.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[1, 2, 3, 4, 5, 6].map((item) => (
+                  <div key={item} className="aspect-square border border-gray-800 bg-gray-900 bg-opacity-40 relative overflow-hidden group cursor-pointer">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-pink-900 bg-opacity-30">
+                      <p className="text-white text-xl tracking-widest">VISION {item}</p>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="w-20 h-20 bg-gray-800 rounded-full"></div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         )}
-        
+
         {/* Contact section */}
         {currentSection === 'contact' && (
           <div className="max-w-4xl mx-auto">

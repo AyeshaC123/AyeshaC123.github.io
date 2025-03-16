@@ -5,6 +5,35 @@
   text-align: center;
 }
 
+
+.parallax {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.parallax::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+.parallax[data-speed="0.2"]::before {
+  background-image: url('./assets/images/test.png');
+  opacity: 0.4;
+}
+
+.parallax[data-speed="0.4"]::before {
+  background-image: url('./assets/images/cat.gif');
+  opacity: 0.6;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -31,7 +60,7 @@
   top: 70%;      /* Adjust vertical position */
   right: 10px;    /* Move to left, change to right: 10px; for right */
   transform: translateY(-40%);
-  width: 250px;  /* Adjust size */
+  width: 300px;  /* Adjust size */
 }
 
 @keyframes logo-spin {
@@ -67,17 +96,37 @@
   margin-top: 10px;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rollIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.roll-in {
+  animation: rollIn 2s ease-out;
+}
+
 .speech-bubble:after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 0;
-  height: 0;
-  border: 20px solid transparent;
-  border-top-color: #fff;
-  border-bottom: 0;
-  border-left: 0;
-  margin-left: -10px;
-  margin-bottom: -20px;
 }

@@ -37,10 +37,44 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  overflow-x: hidden;
+  background: black;
+  color: white;
+  font-family: 'Courier New', monospace;
+}
+
+/* Gradient Overlay Animation */
+.gradient-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, rgba(255, 0, 150, 0.3), rgba(0, 204, 255, 0.3));
+  mix-blend-mode: overlay;
+  animation: gradientShift 6s infinite alternate ease-in-out;
+  z-index: 5;
+}
+
+@keyframes gradientShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(60deg);
+  }
+}
+
+/* Parallax Effect */
+.parallax {
+  will-change: transform;
+  transition: transform 0.2s ease-out;
+}
+
+/* Fade-in animation for smooth text appearance */
+.fade-in {
+  opacity: 0;
 }
 
 h1 {
