@@ -25,14 +25,16 @@
   z-index: -1;
 }
 
-.parallax[data-speed="0.2"]::before {
+/* .parallax[data-speed="0.2"]::before {
   background-image: url('./assets/images/test.png');
   opacity: 0.4;
-}
+  transform: translateZ(-1px) scale(1.2) translateY(20px);
+} */
 
 .parallax[data-speed="0.4"]::before {
   background-image: url('./assets/images/cat.gif');
   opacity: 0.6;
+  transform: translateZ(-1px) scale(1.5) translateY(150px);
 }
 .logo {
   height: 6em;
@@ -49,19 +51,42 @@
 
 .side-image {
   position: absolute;
-  top: 50%;      /* Adjust vertical position */
+  top: 46.5%;      /* Adjust vertical position */
   left: 10px;    /* Move to left, change to right: 10px; for right */
   transform: translateY(-50%);
-  width: 450px;  /* Adjust size */
+  width: 400px;  /* Adjust size */
 }
 
 .right-image {
   position: absolute;
-  top: 70%;      /* Adjust vertical position */
+  top: 75%;      /* Adjust vertical position */
   right: 10px;    /* Move to left, change to right: 10px; for right */
   transform: translateY(-40%);
-  width: 300px;  /* Adjust size */
+  width: 290px;  /* Adjust size */
 }
+
+
+.border-ring {
+  position: absolute;
+  top: 110%;      /* Adjust vertical position */
+  left: 10px;    /* Move to left, change to right: 10px; for right */
+  transform: translateY(-50%);
+  width: 400px;  /* Adjust size */
+}
+
+.face-circle {
+  position: absolute;
+  top: 110%;      /* Adjust vertical position */
+  left: 34px;    /* Move to left, change to right: 10px; for right */
+  transform: translateY(-50%);
+  width: 355px;  /* Adjust size */
+  height: 35%;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
 
 @keyframes logo-spin {
   from {
@@ -86,15 +111,7 @@
   color: #888;
 }
 
-.speech-bubble {
-  position: relative;
-  background: #fff;
-  border-radius: .4em;
-  padding: 10px;
-  text-align: center;
-  width: 200px;
-  margin-top: 10px;
-}
+
 
 @keyframes fadeIn {
   0% {
