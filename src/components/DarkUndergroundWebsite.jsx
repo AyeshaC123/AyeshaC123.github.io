@@ -40,7 +40,7 @@ const DarkUndergroundWebsite = () => {
           <span className="text-gray-400">Moon</span>
         </div>
         <div className="flex space-x-8">
-          {['home', 'about', 'gallery', 'contact'].map((section) => (
+          {['home', 'about', 'gallery', 'tools', 'contact'].map((section) => (
             <button
               key={section}
               onClick={() => {
@@ -69,13 +69,23 @@ const DarkUndergroundWebsite = () => {
               // Welcome to my Digital Realm //
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
-              <div className="border border-gray-800 p-6 bg-gray-900 bg-opacity-40 hover:bg-opacity-60 transition-all cursor-pointer">
+              <div onClick={() => {
+                const element = document.getElementById('gallery');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }} className="border border-gray-800 p-6 bg-gray-900 bg-opacity-40 hover:bg-opacity-60 transition-all cursor-pointer">
                 <h3 className="text-pink-500 text-xl mb-2 tracking-wider">LATEST RELEASE</h3>
                 <p className="text-gray-400">Explore my newest projects.</p>
               </div>
-              <div className="border border-gray-800 p-6 bg-gray-900 bg-opacity-40 hover:bg-opacity-60 transition-all cursor-pointer">
-                <h3 className="text-pink-500 text-xl mb-2 tracking-wider">COOL SIDE STUFF</h3>
-                <p className="text-gray-400">Navigate through my digital art and animations.</p>
+              <div onClick={() => {
+                const element = document.getElementById('tools');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }} className="border border-gray-800 p-6 bg-gray-900 bg-opacity-40 hover:bg-opacity-60 transition-all cursor-pointer">
+                <h3 className="text-pink-500 text-xl mb-2 tracking-wider">Portfolio</h3>
+                <p className="text-gray-400">Navigate through my experiences and resume.</p>
               </div>
             </div>
           </div>
@@ -89,19 +99,19 @@ const DarkUndergroundWebsite = () => {
             </h2>
             <div className="border border-gray-800 p-8 bg-gray-900 bg-opacity-40">
               <p className="text-xl text-gray-300 mb-6">
-                hi hi hi subtext.
+                // A little bit about me //
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                 <div className="flex flex-col space-y-4">
                   <h3 className="text-pink-500 text-xl tracking-wider">MANIFESTO</h3>
                   <p className="text-gray-400">
-                    I'll talk about myself here and the cool stuff i do yada yaday
+                    Hi, i'm Ayesha! That's Aye like EYE and Sha like GUASHA. I'm a senior computer science student attending The College of New Jersey. I'm a software engineer, web developer, and digital artist. I'm passionate about creating innovative solutions specifically in the world of accessibility and exploring the digital realm. I'm always looking for new opportunities to be creative and grow. I'm excited to share my journey with you! Let's connect and create something amazing together!
                   </p>
                 </div>
                 <div className="flex flex-col space-y-4">
-                  <h3 className="text-pink-500 text-xl tracking-wider">VISION</h3>
+                  <h3 className="text-pink-500 text-xl tracking-wider">INTERESTS</h3>
                   <p className="text-gray-400">
-                    woao this is coming out cool ig
+                  My interests lie in digital art and animation, as well as exploring the intersection of AI and creativity through discussions on its integration within artistic mediums. I’m deeply inspired by Studio Ghibli films, enjoy playing classical piano music, and find joy in dissecting Persian and Arabic poetry for their rich layers of meaning and emotion
                   </p>
                 </div>
               </div>
@@ -110,30 +120,95 @@ const DarkUndergroundWebsite = () => {
         </section>
 
         {/* Gallery Section */}
+        {/* Gallery Section */}
         <section id="gallery" className="section fade-slide-in">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-5xl font-bold mb-8 tracking-wider text-center">
-              VISIONS
+              PROJECTS
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div
-                  key={item}
-                  className="aspect-square border border-gray-800 bg-gray-900 bg-opacity-40 relative overflow-hidden group cursor-pointer"
-                >
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-pink-900 bg-opacity-30">
-                    <p className="text-white text-xl tracking-widest">VISION {item}</p>
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="w-20 h-20 bg-gray-800 rounded-full"></div>
+              {[1, 2, 3, 4, 5, 6].map((item) => {
+                let projectName = "";
+                switch (item) {
+                  case 1:
+                    projectName = "NextGenHire";
+                    break;
+                  case 2:
+                    projectName = "PACTALK";
+                    break;
+                  case 3:
+                    projectName = "WayfindingSystems";
+                    break;
+                  case 4:
+                    projectName = "ArmInArm";
+                    break;
+                  case 5:
+                    projectName = "Sustainability";
+                    break;
+                  default:
+                    projectName = "Coming Soon";
+                }
+                return (
+                  <div
+                    key={item}
+                    className="aspect-square border border-gray-800 bg-gray-900 bg-opacity-40 relative overflow-hidden group cursor-pointer"
+                  >
+                    <div className="absolute inset-0 flex items-start justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-pink-900 bg-opacity-30 pt-8">
+                      <p className="text-white text-xl tracking-widest">{projectName}</p>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="w-20 h-20 bg-gray-800 rounded-full"></div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
+
+        <section id="tools" className="section fade-slide-in">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-5xl font-bold mb-8 tracking-wider text-center">
+      TOOLS AND TECHNOLOGIES
+    </h2>
+    <div className="border border-gray-800 p-8 bg-gray-900 bg-opacity-40">
+      <p className="text-xl text-gray-300 mb-6">// My Tech Stack //</p>
+      <p className="text-xl text-gray-300 mb-6">
+        I have experience in the following tools and technologies:
+      </p>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+        {[
+          { name: 'JavaScript', icon: 'devicon-javascript-plain' },
+          { name: 'React', icon: 'devicon-react-original' },
+          { name: 'Node.js', icon: 'devicon-nodejs-plain' },
+          { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-plain' },
+          { name: 'Git', icon: 'devicon-git-plain' },
+          { name: 'HTML5', icon: 'devicon-html5-plain' },
+          { name: 'MongoDB', icon: 'devicon-mongodb-plain' },
+          { name: 'Java', icon: 'devicon-java-plain' },
+          { name: 'SpringBoot', icon: 'devicon-spring-plain' },
+          { name: 'Apache Kafka', icon: 'devicon-apachekafka-plain' },
+          { name: 'CosmoDB', icon: 'devicon-azure-plain' },
+          { name: 'Python', icon: 'devicon-python-plain' },
+          { name: 'Ruby', icon: 'devicon-ruby-plain' },
+          { name: 'Kotlin', icon: 'devicon-kotlin-plain' },
+        ].map((tool, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center space-y-2 hover:scale-105 transform transition duration-300 animate-float"
+          >
+            <i className={`${tool.icon} text-5xl text-pink-500`}></i>
+            <p className="text-gray-400 text-sm">{tool.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Contact Section */}
         <section id="contact" className="section fade-slide-in">

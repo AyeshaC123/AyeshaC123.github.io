@@ -18,6 +18,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -40,6 +41,15 @@ a:hover {
   min-height: 100vh;
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
 
 
