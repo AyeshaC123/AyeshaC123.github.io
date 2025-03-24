@@ -105,14 +105,19 @@ const DarkUndergroundWebsite = () => {
                 <div className="flex flex-col space-y-4">
                   <h3 className="text-pink-500 text-xl tracking-wider">MANIFESTO</h3>
                   <p className="text-gray-400">
-                    Hi, i'm Ayesha! That's Aye like EYE and Sha like GUASHA. I'm a senior computer science student attending The College of New Jersey. I'm a software engineer, web developer, and digital artist. I'm passionate about creating innovative solutions specifically in the world of accessibility and exploring the digital realm. I'm always looking for new opportunities to be creative and grow. I'm excited to share my journey with you! Let's connect and create something amazing together!
+                    Hi, i'm Ayesha! I'm a senior computer science student attending The College of New Jersey. I'm a software engineer, web developer, and artist. I'm passionate about creating innovative solutions specifically in the world of accessibility and exploring the digital realm. I'm always looking for new opportunities to be creative and grow. I'm excited to share my journey with you! Let's connect and create something amazing together!
                   </p>
                 </div>
                 <div className="flex flex-col space-y-4">
                   <h3 className="text-pink-500 text-xl tracking-wider">INTERESTS</h3>
                   <p className="text-gray-400">
-                  My interests lie in digital art and animation, as well as exploring the intersection of AI and creativity through discussions on its integration within artistic mediums. I’m deeply inspired by Studio Ghibli films, enjoy playing classical piano music, and find joy in dissecting Persian and Arabic poetry for their rich layers of meaning and emotion
+                  My interests lie in learning new languages, reading and playing classical instrumental music. I also enjoy arabic and persian poetry, as well learning new skills that advance my creative agenda.
                   </p>
+                  <a href="/src/assets/images/AyeshaChaudhry_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <button className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded mt-4">
+                      View Resume
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

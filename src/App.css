@@ -79,7 +79,7 @@
   top: 110%;      /* Adjust vertical position */
   left: 34px;    /* Move to left, change to right: 10px; for right */
   transform: translateY(-50%);
-  width: 355px;  /* Adjust size */
+  width: 340px;  /* Adjust size */
   height: 35%;
   border-radius: 50%;
   object-fit: cover;
