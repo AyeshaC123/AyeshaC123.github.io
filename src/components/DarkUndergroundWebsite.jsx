@@ -106,19 +106,17 @@ const DarkUndergroundWebsite = () => {
                 <div className="flex flex-col space-y-4">
                   <h3 className="text-pink-500 text-xl tracking-wider">MANIFESTO</h3>
                   <p className="text-gray-400">
-                    Hi, i'm Ayesha! I'm a senior computer science student attending The College of New Jersey. I'm a software engineer, web developer, and artist. I'm passionate about creating innovative solutions specifically in the world of accessibility and exploring the digital realm. I'm always looking for new opportunities to be creative and grow. I'm excited to share my journey with you! Let's connect and create something amazing together!
+                    Hi, I'm Ayesha! I'm a senior computer science student attending The College of New Jersey. I'm a software engineer, web developer, and artist. I'm passionate about creating innovative solutions specifically in the world of accessibility and exploring the digital realm. I'm always looking for new opportunities to be creative and grow. I'm excited to share my journey with you! Let's connect and create something amazing together!
                   </p>
                 </div>
                 <div className="flex flex-col space-y-4">
                   <h3 className="text-pink-500 text-xl tracking-wider">INTERESTS</h3>
                   <p className="text-gray-400">
-                  My interests lie in learning new languages, reading and playing classical instrumental music. I also enjoy Arabic and Persian poetry, as well as learning new skills that advance my creative agenda.
+                    My interests lie in learning new languages, reading and
+                    playing classical instrumental music. I also enjoy Arabic
+                    and Persian poetry, as well as learning new skills that advance
+                    my creative agenda.
                   </p>
-                  <a href="/src/assets/images/AyeshaChaudhry_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                    <button className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded mt-4">
-                      View Resume
-                    </button>
-                  </a>
                 </div>
               </div>
             </div>
@@ -207,13 +205,24 @@ const DarkUndergroundWebsite = () => {
           { name: 'Python', icon: 'devicon-python-plain' },
           { name: 'Ruby', icon: 'devicon-ruby-plain' },
           { name: 'Kotlin', icon: 'devicon-kotlin-plain' },
+          { name: 'Resume', icon: 'fa fa-file-text' }
         ].map((tool, index) => (
           <div
             key={index}
             className="flex flex-col items-center justify-center space-y-2 hover:scale-105 transform transition duration-300 animate-float"
           >
-            <i className={`${tool.icon} text-5xl text-pink-500`}></i>
-            <p className="text-gray-400 text-sm">{tool.name}</p>
+           {tool.name === 'Resume' ? (
+              <a href="/src/assets/images/AyeshaChaudhry_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <button className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded mt-4">
+                View Resume
+              </button>
+              </a>
+            ) : (
+              <>
+                <i className={`${tool.icon} text-5xl text-pink-500`}></i>
+                <p className="text-gray-400 text-sm">{tool.name}</p>
+              </>
+            )}
           </div>
         ))}
       </div>
