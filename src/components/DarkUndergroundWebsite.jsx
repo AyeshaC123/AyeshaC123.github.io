@@ -112,7 +112,7 @@ const DarkUndergroundWebsite = () => {
                 <div className="flex flex-col space-y-4">
                   <h3 className="text-pink-500 text-xl tracking-wider">INTERESTS</h3>
                   <p className="text-gray-400">
-                  My interests lie in learning new languages, reading and playing classical instrumental music. I also enjoy arabic and persian poetry, as well learning new skills that advance my creative agenda.
+                  My interests lie in learning new languages, reading and playing classical instrumental music. I also enjoy Arabic and Persian poetry, as well as learning new skills that advance my creative agenda.
                   </p>
                   <a href="/src/assets/images/AyeshaChaudhry_Resume.pdf" target="_blank" rel="noopener noreferrer">
                     <button className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded mt-4">
