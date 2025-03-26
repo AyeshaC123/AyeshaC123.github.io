@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import 'font-awesome/css/font-awesome.min.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -132,43 +133,49 @@ const DarkUndergroundWebsite = () => {
               PROJECTS
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[1, 2, 3, 4, 5, 6].map((item) => {
-                let projectName = "";
-                switch (item) {
-                  case 1:
-                    projectName = "NextGenHire";
-                    break;
-                  case 2:
-                    projectName = "PACTALK";
-                    break;
-                  case 3:
-                    projectName = "WayfindingSystems";
-                    break;
-                  case 4:
-                    projectName = "ArmInArm";
-                    break;
-                  case 5:
-                    projectName = "Sustainability";
-                    break;
-                  default:
-                    projectName = "Coming Soon";
-                }
-                return (
-                  <div
-                    key={item}
-                    className="aspect-square border border-gray-800 bg-gray-900 bg-opacity-40 relative overflow-hidden group cursor-pointer"
-                  >
-                    <div className="absolute inset-0 flex items-start justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-pink-900 bg-opacity-30 pt-8">
-                      <p className="text-white text-xl tracking-widest">{projectName}</p>
-                    </div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <div className="w-20 h-20 bg-gray-800 rounded-full"></div>
-                      </div>
+              {[
+                {
+                  name: 'NextGenHire',
+                  githubLink: 'https://github.com/AyeshaC123/NextGenHire',
+                },
+                {
+                  name: 'PACTALK',
+                  githubLink: 'https://github.com/AyeshaC123/PACTALK-AC',
+                },
+                {
+                  name: 'WayfindingSystems',
+                  githubLink: 'https://github.com/AyeshaC123/AndroidAppUI',
+                },
+                {
+                  name: 'ArmInArm',
+                  githubLink: 'https://github.com/AyeshaC123/ArmInArm-Fall2024-AC',
+                },
+                {
+                  name: 'Sustainability',
+                  githubLink: 'https://github.com/AyeshaC123/Sustainability',
+                },
+                {
+                  name: 'Coming Soon',
+                  githubLink: '',
+                },
+              ].map((project, index) => (
+                <a
+                  key={index}
+                  href={project.githubLink || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="aspect-square border border-gray-800 bg-gray-900 bg-opacity-40 relative overflow-hidden group cursor-pointer block"
+                >
+                  <div className="absolute inset-0 flex items-start justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-pink-900 bg-opacity-30 pt-8">
+                    <p className="text-white text-xl tracking-widest">{project.name}</p>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="w-20 h-20 bg-gray-800 rounded-full"></div>
                     </div>
                   </div>
-                );
-              })}
+                </a>
+              ))}
             </div>
           </div>
         </section>
@@ -192,7 +199,7 @@ const DarkUndergroundWebsite = () => {
           { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-plain' },
           { name: 'Git', icon: 'devicon-git-plain' },
           { name: 'HTML5', icon: 'devicon-html5-plain' },
-          { name: 'MongoDB', icon: 'devicon-mongodb-plain' },
+          { name: 'MongoDB', icon: 'devicon-java-plain' },
           { name: 'Java', icon: 'devicon-java-plain' },
           { name: 'SpringBoot', icon: 'devicon-spring-plain' },
           { name: 'Apache Kafka', icon: 'devicon-apachekafka-plain' },
@@ -225,26 +232,20 @@ const DarkUndergroundWebsite = () => {
               <p className="text-xl text-gray-300 mb-8 text-center">
                 Join us in the depths of the digital abyss.
               </p>
-              <form className="flex flex-col space-y-4">
-                <input
-                  type="text"
-                  placeholder="YOUR NAME"
-                  className="bg-black border border-gray-800 p-4 text-white placeholder-gray-600 focus:border-pink-500 focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="YOUR EMAIL"
-                  className="bg-black border border-gray-800 p-4 text-white placeholder-gray-600 focus:border-pink-500 focus:outline-none"
-                />
-                <textarea
-                  placeholder="YOUR MESSAGE"
-                  rows={5}
-                  className="bg-black border border-gray-800 p-4 text-white placeholder-gray-600 focus:border-pink-500 focus:outline-none"
-                ></textarea>
-                <button className="bg-pink-900 hover:bg-pink-800 text-white py-4 px-8 tracking-wider self-start">
-                  TRANSMIT
-                </button>
-              </form>
+              <div className="flex flex-col items-center space-y-4">
+                <p className="text-pink-500">
+                  <i className="fa fa-envelope mr-2"></i>
+                  ashch7212@gmail.com
+                </p>
+                <a href="https://www.linkedin.com/in/ayesha-chaudhry1/" className="text-pink-500 hover:text-pink-300 transition-colors">
+                  <i className="fa fa-linkedin mr-2"></i>
+                  LinkedIn
+                </a>
+                <a href="https://github.com/AyeshaC123" className="text-pink-500 hover:text-pink-300 transition-colors">
+                  <i className="fa fa-github mr-2"></i>
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </section>
