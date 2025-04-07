@@ -153,7 +153,7 @@ const DarkUndergroundWebsite = () => {
                   githubLink: 'https://github.com/AyeshaC123/Sustainability',
                 },
                 {
-                  name: 'Coming Soon',
+                  name: 'Upcoming Project',
                   githubLink: '',
                 },
               ].map((project, index) => (
