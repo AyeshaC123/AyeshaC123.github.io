@@ -115,7 +115,7 @@ const DarkUndergroundWebsite = () => {
                     My interests lie in learning new languages, reading and
                     playing classical instrumental music. I also enjoy Arabic
                     and Persian poetry, as well as learning new skills that advance
-                    my creative agenda.
+                    my creative agenda. 
                   </p>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const DarkUndergroundWebsite = () => {
         </section>
 
         {/* Gallery Section */}
-        {/* Gallery Section */}
+        
         <section id="gallery" className="section fade-slide-in">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-5xl font-bold mb-8 tracking-wider text-center">
@@ -146,7 +146,7 @@ const DarkUndergroundWebsite = () => {
                 },
                 {
                   name: 'ArmInArm',
-                  githubLink: 'https://github.com/AyeshaC123/ArmInArm-Fall2024-AC',
+                  githubLink: 'https://github.com/AyeshaC123/ArmInArm-Fall2024-AIC',
                 },
                 {
                   name: 'Sustainability',
