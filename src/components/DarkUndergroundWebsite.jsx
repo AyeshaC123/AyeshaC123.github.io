@@ -106,7 +106,7 @@ const DarkUndergroundWebsite = () => {
                 <div className="flex flex-col space-y-4">
                   <h3 className="text-pink-500 text-xl tracking-wider">MANIFESTO</h3>
                   <p className="text-gray-400">
-                    Hi, I'm Ayesha! I'm a senior computer science student attending The College of New Jersey. I'm a software engineer, web developer, and artist. I'm passionate about creating innovative solutions specifically in the world of accessibility and exploring the digital realm. I'm always looking for new opportunities to be creative and grow. I'm excited to share my journey with you! Let's connect and create something amazing together!
+                    Hi, I'm Ayesha Chaudhry! I'm a senior computer science student attending The College of New Jersey. I'm a software engineer, web developer, and artist. I'm passionate about creating innovative solutions specifically in the world of accessibility and exploring the digital realm. I'm always looking for new opportunities to be creative and grow. I'm excited to share my journey with you! Let's connect and create something amazing together!
                   </p>
                 </div>
                 <div className="flex flex-col space-y-4">
